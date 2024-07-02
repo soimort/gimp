@@ -349,6 +349,12 @@ gui_display_create (Gimp      *gimp,
   GimpContext *context = gimp_get_user_context (gimp);
   GimpDisplay *display = GIMP_DISPLAY (gui_get_empty_display (gimp));
 
+  if (image) {
+    gchar *uri;
+    uri = gimp_image_get_uri (image);
+    printf(">>> gui_display_create: %s\n", uri); fflush(stdout);
+  }
+
   if (display)
     {
       gimp_display_fill (display, image, unit, scale);
