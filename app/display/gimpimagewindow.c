@@ -2022,7 +2022,7 @@ gimp_image_window_create_tab_label (GimpImageWindow  *window,
   if (image)
     gimp_view_set_viewable (GIMP_VIEW (view), GIMP_VIEWABLE (image));
 
-  button = gtk_button_new ();
+  /**button = gtk_button_new ();
   gtk_widget_set_can_focus (button, FALSE);
   gtk_button_set_relief (GTK_BUTTON (button), GTK_RELIEF_NONE);
   gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
@@ -2035,7 +2035,7 @@ gimp_image_window_create_tab_label (GimpImageWindow  *window,
 
   g_signal_connect_swapped (button, "clicked",
                             G_CALLBACK (gimp_image_window_shell_close_button_callback),
-                            shell);
+                            shell);**/
 
   return hbox;
 }
