@@ -548,6 +548,8 @@ gimp_display_delete (GimpDisplay *display)
 void
 gimp_display_close (GimpDisplay *display)
 {
+  printf(">>> gimp_display_close!\n"); fflush(stdout);
+
   g_return_if_fail (GIMP_IS_DISPLAY (display));
 
   if (gimp_container_get_n_children (display->gimp->displays) > 1)

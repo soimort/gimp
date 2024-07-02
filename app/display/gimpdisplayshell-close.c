@@ -91,6 +91,12 @@ gimp_display_shell_close (GimpDisplayShell *shell,
   if (shell->display->gimp->busy)
     return;
 
+  if (image) {
+    gchar *uri;
+    uri = gimp_image_get_uri (image);
+    printf(">>> gimp_display_shell_close: %s\n", uri); fflush(stdout);
+  }
+
   /*  If the image has been modified, give the user a chance to save
    *  it before nuking it--this only applies if its the last view
    *  to an image canvas.  (a image with disp_count = 1)
