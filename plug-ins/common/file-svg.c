@@ -27,7 +27,7 @@
 #include <string.h>
 
 #include <librsvg/rsvg.h>
-#include <librsvg/rsvg-features.h>  /* for version check */
+#include <librsvg/librsvg-features.h>  /* for version check */
 
 #include "libgimp/gimp.h"
 #include "libgimp/gimpui.h"
